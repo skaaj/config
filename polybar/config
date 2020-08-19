@@ -42,7 +42,7 @@ line-size = 2
 line-color = #5294e2
 
 border-right-size = 15
-border-color = #2f343f
+border-color = #bf2f343f
 
 padding-left = 0
 padding-right = 0
@@ -57,7 +57,7 @@ font-3 = Font Awesome 5 Free Regular:size=10:style=Regular;2
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio xkeyboard eth
+modules-right = pulseaudio xkeyboard
 
 tray-position = right
 tray-padding = 10
@@ -241,18 +241,18 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp3s0
+interface = enp7s0
 interval = 0.5
 
 format-connected-underline = 
 ;format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip% %downspeed% %upspeed%
+label-connected = %local_ip% %downspeed:9% %upspeed:9%
 
 format-disconnected = not connected
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
+label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]

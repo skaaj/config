@@ -8,3 +8,4 @@ mkdir -p misc
 \cp ~/.config/polybar/* ./polybar/
 \cp ~/.Xresources ./misc/Xresources
 \cp ~/.config/picom/picom.conf ./picom/picom.conf
+\cp /etc/X11/xorg.conf.d/50-mouse-acceleration.conf ./misc/50-mouse-acceleration.conf
