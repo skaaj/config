@@ -105,7 +105,7 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+comma fullscreen toggle
+bindsym $mod+comma exec polybar-msg cmd toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
