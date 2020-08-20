@@ -59,7 +59,7 @@ font-3 = Font Awesome 5 Free Regular:size=10:style=Regular;2
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio xkeyboard
+modules-right = xkeyboard
 
 tray-position = right
 tray-padding = 10
@@ -262,10 +262,10 @@ label-disconnected = %ifname% disconnected
 type = internal/date
 interval = 5
 
-date = %a %e
+date = "%a, %B %e"
 ;date-alt = " %Y-%m-%d"
 
-time = %H:%M
+time = "    %H:%M"
 ;time-alt = %H:%M:%S
 
 format-prefix = 
