@@ -17,8 +17,10 @@
 ;==========================================================
 
 [colors]
-background = #bf2f343f
-background-alt = #bf51576c
+arc-background = #bf2f343f
+arc-background-alt = #51576c
+background = #00000000
+background-alt = #8051576c
 foreground = #dfdfdf
 foreground-alt = #dfdfdf
 primary = #5294e2
@@ -43,8 +45,9 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #5294e2
 
-border-right-size = 15
-border-color = #bf2f343f
+border-left-size = 10
+border-right-size = 10
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 0
@@ -65,7 +68,7 @@ tray-position = right
 tray-padding = 10
 tray-detached = false
 tray-offset-x = 0
-tray-background = #bf2f343f
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -147,7 +150,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+;label-focused-underline= ${colors.primary}
 label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
@@ -157,7 +160,7 @@ label-unfocused-padding = 4
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
