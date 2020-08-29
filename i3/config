@@ -5,7 +5,7 @@
 set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 2
+default_border pixel 1
 default_floating_border normal
 
 # Hide borders
@@ -33,8 +33,8 @@ bindsym $mod+Shift+q kill
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+r exec --no-startup-id rofi -show drun
-bindsym $mod+f exec --no-startup-id rofi -show window
+bindsym $mod+f exec --no-startup-id rofi -show drun
+bindsym $mod+c exec --no-startup-id rofi -show window
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -243,7 +243,7 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-#bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
@@ -321,7 +321,14 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-client.focused #ff0000
+# class                 border  bground text    indicator child_border
+client.focused          #4C7899 #285577 #FFFFFF #2E9EF4   #ababab
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #FFFFFF
 
 #############################
 ### settings for i3-gaps: ###

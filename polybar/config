@@ -17,10 +17,10 @@
 ;==========================================================
 
 [colors]
-arc-background = #bf2f343f
+arc-background = #2f343f
 arc-background-alt = #51576c
-background = #00000000
-background-alt = #8051576c
+background = #000000
+background-alt = #000000
 foreground = #dfdfdf
 foreground-alt = #dfdfdf
 primary = #5294e2
@@ -150,7 +150,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.primary}
 label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
@@ -160,7 +160,7 @@ label-unfocused-padding = 4
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
+label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
