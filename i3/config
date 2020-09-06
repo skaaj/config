@@ -28,12 +28,12 @@ floating_modifier $mod
 bindsym $mod+Return exec terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+f exec --no-startup-id rofi -show drun
+bindsym $mod+space exec --no-startup-id rofi -show drun
 bindsym $mod+c exec --no-startup-id rofi -show window
 
 # launch categorized menu
@@ -102,7 +102,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+#bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+comma exec polybar-msg cmd toggle
@@ -113,10 +113,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
