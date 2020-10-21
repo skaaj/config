@@ -17,4 +17,4 @@ function browse() {
     cd $directory;
 }
 
-alias p="browse $WORKSPACE_DIR"
+alias p='cd $(find $WORKSPACE_DIR -maxdepth 2 -type d | fzf);'
