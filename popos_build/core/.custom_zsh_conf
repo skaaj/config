@@ -3,11 +3,13 @@ export PATH="$PATH:/home/skaaj/Applications/sbt/sbt-1.3.13/bin"
 export PATH="$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin"
 export PATH="$PATH:/opt/idea-IC-202.7660.26/bin"
 export PATH="$PATH:/home/skaaj/Applications/mongodb-shell/bin"
+export PATH="$PATH:/home/skaaj/Applications/anaconda3/bin"
 
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export ANDROID_HOME="/home/skaaj/Applications/android-sdk"
 
 export WORKSPACE_DIR="/home/skaaj/Workspace"
+export WS=$WORKSPACE_DIR
 
 function browse() {
     directory=`ls -Rd $1/* | fzf`
@@ -19,3 +21,4 @@ function browse() {
 }
 
 alias p='cd $(find $WORKSPACE_DIR -maxdepth 2 -type d | fzf);'
+alias open=xdg-open
