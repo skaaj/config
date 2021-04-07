@@ -129,7 +129,7 @@
 }
 #entry {
     spacing:    0;
-    text-color: @ormal-foreground;
+    text-color: @normal-foreground;
 }
 #prompt {
     spacing:    0;
