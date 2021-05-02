@@ -11,5 +11,5 @@ mkdir -p apps/todoist
 \cp /opt/Todoist/icon.png ./apps/todoist
 \cp ~/.local/share/applications/todoist.desktop ./apps/todoist/todoist.desktop
 
-mkdir -p apps/kitty
-\cp ~/.config/kitty/* ./apps/kitty
+rm -r apps/kitty
+\cp -r ~/.config/kitty ./apps
