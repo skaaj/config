@@ -74,7 +74,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source $HOME/.config/custom/path.sh
 source $HOME/.config/custom/vars.sh
 source $HOME/.config/custom/functions.sh
 source $HOME/.config/custom/aliases.sh
