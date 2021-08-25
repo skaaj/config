@@ -6,6 +6,7 @@ rm -r apps 2> /dev/null
 mkdir -p core
 mkdir -p apps
 mkdir -p apps/todoist
+mkdir -p apps/deezer
 
 \cp ~/.zshrc ./core
 \cp ~/.profile ./core
@@ -16,4 +17,6 @@ mkdir -p apps/todoist
 
 \cp /opt/Todoist/icon.png ./apps/todoist
 \cp ~/.local/share/applications/todoist.desktop ./apps/todoist
+
+\cp ~/.local/share/applications/deezer.desktop ./apps/deezer
 

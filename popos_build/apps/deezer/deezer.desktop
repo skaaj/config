@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=Deezer
+Terminal=false
+Name=Deezer
+Exec=/opt/Deezer/Deezer
+Type=Application
+Icon=/opt/Deezer/resources/app/icon.png
+Categories=Audio;
