@@ -5,5 +5,5 @@ if [ -z "$1" ]
 then
 	account="skaaj"
 fi
-	
-xdg-open https://github.com/$account
+
+xdg-open https://github.com/$account &> /dev/null &
