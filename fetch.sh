@@ -6,11 +6,13 @@ mkdir -p i3 2> /dev/null
 mkdir -p polybar 2> /dev/null
 mkdir -p picom 2> /dev/null
 mkdir -p misc 2> /dev/null
+mkdir -p rofi 2> /dev/null
 
 \cp ~/.zshrc ./core
 \cp ~/.profile ./core
 \cp -r ~/.config/custom ./core
 \cp -r ~/.config/kitty .
+\cp -r ~/.config/rofi .
 
 \cp ~/.local/share/applications/deezer.desktop ./apps/deezer
 
