@@ -4,14 +4,14 @@
 	separatorcolor:                  #cccccc;
 	normal-background:               rgba(253,246,227,0);
 	normal-foreground:               #cccccc;
-	alternate-normal-foreground:     rgba(238,232,213,0);
+	alternate-normal-foreground:     #cccccc;
 	selected-normal-background:      #94ebeb;
-	selected-normal-foreground:      #000000;
+	selected-normal-foreground:      black;
 	active-background:               rgba(253,246,227,0);
 	active-foreground:               #94ebeb;
 	alternate-active-background:     rgba(238,232,213,0);
 	selected-active-background:      #94ebeb;
-	selected-active-foreground:      #000000;
+	selected-active-foreground:      #cccccc;
 	urgent-background:               rgba(253,246,227,0);
 	urgent-foreground:               #f8b572;
 	alternate-urgent-background:     rgba(238,232,213,0);
@@ -24,101 +24,132 @@
 }
 
 * {
-    spacing:    2;
+    spacing: 2;
     background-color: transparent;
 }
-#window {
+
+window {
     border: 2;
-    border-color:rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.3);
     padding: 0;
     background-color: rgba(0,0,0,0);
 }
-#mainbox {
-    border:  0;
+
+mainbox {
+    border: 0;
     padding: 0;
     margin: 0;
-    background-color:@background;
+    background-color: @background;
 }
-#message {
-    border:  1px dash 0px 0px ;
+
+message {
+    border: 1px dash 0px 0px ;
     padding: 2px 0px 0px ;
     border-color: @separatorcolor;
 }
-#error-message {
+
+error-message {
     padding: 20;
-    background-color:@background;
+    background-color: @background;
 }
-#textbox {
+
+textbox {
     text-color: @foreground;
 }
-#listview {
+
+listview {
     fixed-height: 0;
-    padding:      0;
+    padding: 0;
 }
-#element {
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element-icon {
+    background-color: inherit;
+}
+
+element {
     border: 0;
     padding: 15 40 15 40;
 }
-#element normal.normal {
+
+element.normal.normal {
     text-color: @normal-foreground;
     background-color: @normal-background;
 }
-#element normal.urgent {
+
+element.normal.urgent {
     text-color: @urgent-foreground;
     background-color: @urgent-background;
 }
-#element normal.active {
+
+element.normal.active {
     text-color: @active-foreground;
     background-color: @active-background;
 }
-#element selected.normal {
+
+element.selected.normal {
     text-color: @selected-normal-foreground;
     background-color: @selected-normal-background;
 }
-#element selected.urgent {
+
+element.selected.urgent {
     text-color: @selected-urgent-foreground;
     background-color: @selected-urgent-background;
 }
-#element selected.active {
+
+element.selected.active {
     text-color: @selected-active-foreground;
     background-color: @selected-active-background;
 }
-#element alternate.normal {
+
+element.alternate.normal {
     text-color: @alternate-normal-foreground;
     background-color: @alternate-normal-background;
 }
-#element alternate.urgent {
+
+element.alternate.urgent {
     text-color: @alternate-urgent-foreground;
     background-color: @alternate-urgent-background;
 }
-#element alternate.active {
+
+element.alternate.active {
     text-color: @alternate-active-foreground;
     background-color: @alternate-active-background;
 }
-#scrollbar {
-    border:  0;
+
+scrollbar {
+    border: 0;
     width: 4px;
     padding: 0;
     handle-color: @normal-foreground;
 }
-#sidebar {
-    border:       2px dash 0px 0px ;
+
+sidebar {
+    border: 2px dash 0px 0px;
     border-color: @separatorcolor;
 }
-#button selected {
+
+button.selected {
     background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    text-color: @selected-normal-foreground;
 }
-#inputbar, case-indicator, entry, prompt, button {
+
+inputbar, case-indicator, entry, prompt, button {
     spacing: 0;
     padding: 10;
     background-color: #2a2928;
-    text-color:      @normal-foreground;
+    text-color: @normal-foreground;
 }
+
 textbox-prompt-colon {
     str: "";
 }
-#inputbar {
+
+inputbar {
     border: 0 0 2 0;
     border-color: #272424;
 }
