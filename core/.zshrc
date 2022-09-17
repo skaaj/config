@@ -77,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.config/custom/vars.sh
 source $HOME/.config/custom/functions.sh
 source $HOME/.config/custom/aliases.sh
-source $HOME/.config/custom/path.sh
+# ...and sourcing of $PATH is done in .profile
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
