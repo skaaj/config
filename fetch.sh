@@ -14,9 +14,6 @@ mkdir -p rofi 2> /dev/null
 \cp -r ~/.config/kitty .
 \cp -r ~/.config/rofi .
 
-\cp ~/.local/share/applications/deezer.desktop ./apps/deezer
-
-
 \cp ~/.i3/config ./i3/config
 \cp ~/.config/polybar/* ./polybar/
 \cp ~/.Xresources ./misc/Xresources
