@@ -13,8 +13,8 @@ mkdir -p rofi 2> /dev/null
 \cp -r ~/.config/custom ./core
 \cp -r ~/.config/kitty .
 \cp -r ~/.config/rofi .
-
-\cp ~/.i3/config ./i3/config
+\cp ~/.config/i3/config ./i3/config
+\cp ~/.config/i3status/config ./i3/i3status
 \cp ~/.config/polybar/* ./polybar/
 \cp ~/.Xresources ./misc/Xresources
 \cp ~/.config/picom/picom.conf ./picom/picom.conf
