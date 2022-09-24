@@ -37,6 +37,7 @@ exec --no-startup-id nm-applet
 # Misc startups
 exec --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/current
+exec --no-startup-id /usr/lib/gsd-xsettings
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
