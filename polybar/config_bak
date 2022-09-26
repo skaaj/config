@@ -31,7 +31,7 @@ alert = #bd2c40
 ;monitor = ${env:MONITOR:HDMI-1}
 bottom = true
 width = 100%
-height = 27
+height = 32
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 0.0
@@ -45,7 +45,7 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #5294e2
 
-border-left-size = 10
+border-left-size = 0
 border-right-size = 10
 border-color = ${colors.background}
 
@@ -53,16 +53,16 @@ padding-left = 0
 padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = Droid Sans:size=9:weight=bold;2
+font-0 = Droid Sans:size=10:weight=bold;2
 font-1 = Font Awesome 5 Brands Regular:size=10:style=Regular;2
 font-2 = Font Awesome 5 Free Solid:size=10:style=Solid;2
 font-3 = Font Awesome 5 Free Regular:size=10:style=Regular;2
 
 modules-left = i3
-modules-center = date
-modules-right = xkeyboard battery
+modules-center = 
+modules-right = wired-network date battery
 
 tray-position = right
 tray-padding = 10
@@ -151,11 +151,11 @@ label-mode-background = ${colors.primary}
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 4
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 4
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -166,7 +166,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 4
+label-urgent-padding = 2
 
 ; Separator in between workspaces
 ;label-separator = |
@@ -261,14 +261,18 @@ format-disconnected = not connected
 label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/wired-network]
+type = internal/network
+interface = eth1
+
 [module/date]
 type = internal/date
 interval = 5
 
-date = "%a, %B %e"
+date = "%Y-%m-%d"
 ;date-alt = " %Y-%m-%d"
 
-time = "    %H:%M"
+time = "%H:%M"
 ;time-alt = %H:%M:%S
 
 format-prefix = 
