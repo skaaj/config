@@ -20,16 +20,16 @@
 background = #000000
 background-alt = #373B41
 foreground = #C5C8C6
-primary = #F0C674
+primary = #E95420
 secondary = #8ABEB7
 alert = #A54242
 disabled = #707880
 
 [bar/example]
 width = 100%
-height = 24pt
+height = 28pt
 radius = 0
-bottom = true
+bottom = false
 ; dpi = 96
 
 background = ${colors.background}
@@ -45,13 +45,16 @@ padding-right = 1
 
 module-margin = 1
 
-separator = |
+separator = 
 separator-foreground = ${colors.disabled}
 
-font-0 = monospace;2
+font-0 = JetBrainsMono-Regular;2
+font-1 = JetBrainsMono Nerd Font Mono:style=Regular:size=16;2
+font-2 = monospace;2
 
 modules-left = xworkspaces xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
+modules-center = 
+modules-right = pulseaudio wlan eth date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -103,9 +106,11 @@ label-unmounted-foreground = ${colors.disabled}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-prefix = "VOL "
+format-volume-prefix = "墳 "
 format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
+
+format-margin = 30
 
 label-volume = %percentage%%
 
@@ -134,7 +139,7 @@ label = %percentage_used:2%%
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "CPU "
+format-prefix = "CPU"
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
@@ -157,13 +162,16 @@ label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 5
 
-date = %H:%M
-date-alt = %Y-%m-%d %H:%M:%S
+time = %H:%M
+date = %a %d %b
 
-label = %date%
-label-foreground = ${colors.primary}
+format-prefix = " "
+format-foreground = ${colors.primary}
+
+label = "%date%, %time%"
+label-foreground = ${colors.foreground}
 
 [settings]
 screenchange-reload = true
