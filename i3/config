@@ -5,7 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-for_window [class="^.*"] border pixel 1
+# Disable window titles
+default_border pixel 1
 
 # i3 config file (v4)
 #
