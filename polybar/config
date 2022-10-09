@@ -26,10 +26,11 @@ primary = #285577
 secondary = #8ABEB7
 alert = #A54242
 disabled = #707880
+merc-blue = #04BFAD
 
-[bar/example]
+[bar/main]
 width = 100%
-height = 28pt
+height = 32 
 radius = 0
 bottom = true
 ; dpi = 96
@@ -43,7 +44,7 @@ border-size = 0pt
 border-color = #00000000
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 
 module-margin = 1
 
@@ -51,7 +52,7 @@ separator =
 separator-foreground = ${colors.disabled}
 
 font-0 = JetBrainsMono-Regular;2
-font-1 = JetBrainsMono Nerd Font Mono:style=Regular:size=16;2
+font-1 = JetBrainsMono Nerd Font Mono:style=Regular:size=22;4
 font-2 = monospace;2
 
 modules-left = i3 xwindow
@@ -126,6 +127,8 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 blacklist-2 = caps lock
 
+format-prefix = " "
+
 label-layout = %layout%
 label-layout-foreground = ${colors.foreground}
 
@@ -149,7 +152,7 @@ label = %percentage:2%%
 
 [network-base]
 type = internal/network
-interval = 5
+interval = 1
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
@@ -161,8 +164,9 @@ label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
 
 [module/eth]
 inherit = network-base
+interface = enp8s0 
 interface-type = wired
-label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
+label-connected = " %upspeed%  %downspeed%"
 
 [module/date]
 type = internal/date
@@ -186,11 +190,11 @@ label-mode-foreground = ${colors.primary}
 label-focused = "%index%"
 label-focused-padding = 1
 label-focused-foreground = #ffffff
-label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.merc-blue}
 
 label-unfocused = %index%
 label-unfocused-padding = 1
-label-unfocused-foreground = #757575
+label-unfocused-foreground = #545454
 
 [module/spotify]
 type = custom/script
