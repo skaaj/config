@@ -30,34 +30,39 @@ merc-blue = #04BFAD
 
 [bar/main]
 width = 100%
-height = 32 
+height = 36pt
 radius = 0
 bottom = true
 ; dpi = 96
 
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3pt
+line-size = 2pt
 
 border-size = 0pt
 border-color = #00000000
 
-padding-left = 0
-padding-right = 0
+border-top-size = 0pt
+border-top-color = #104040
+
+padding-left = 1
+padding-right = 2
 
 module-margin = 1
 
 separator = 
 separator-foreground = ${colors.disabled}
 
-font-0 = JetBrainsMono-Regular;2
-font-1 = JetBrainsMono Nerd Font Mono:style=Regular:size=22;4
-font-2 = monospace;2
+font-0 = Iosevka Nerd Font:size=12;3
+font-1 = feather:size=12;3
+; font-1 = JetBrainsMono Nerd Font Mono:style=Regular:size=22;4
+; font-2 = monospace;2
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = spotify pulseaudio wlan eth xkeyboard date
+modules-right = spotify pulseaudio xkeyboard date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -110,16 +115,20 @@ label-unmounted-foreground = ${colors.disabled}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-prefix = "墳 "
-format-volume-prefix-foreground = ${colors.foreground}
-format-volume = <label-volume>
+;format-volume-prefix-foreground = ${colors.foreground}
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = 
 
 format-margin = 30
 
 label-volume = %percentage%%
 
-label-muted = muted
+label-muted = " mtd"
 label-muted-foreground = ${colors.disabled}
+
+ramp-volume-0 = 
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -127,7 +136,7 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 blacklist-2 = caps lock
 
-format-prefix = " "
+format-prefix = " "
 
 label-layout = %layout%
 label-layout-foreground = ${colors.foreground}
@@ -175,7 +184,7 @@ interval = 5
 time = %H:%M
 date = %d/%m/%y
 
-format-prefix = " "
+format-prefix = " "
 format-foreground = ${colors.foreground}
 
 label = "%date% %time%"
@@ -199,7 +208,7 @@ label-unfocused-foreground = #545454
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = " "
 format = "<label>"
 exec = python3 ~/.config/custom/bin/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
