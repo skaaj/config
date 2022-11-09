@@ -38,6 +38,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Misc startups
+exec_always --no-startup-id setxkbmap fr,fr oss,bepo grp:alt_caps_toggle
 exec --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/current
 exec --no-startup-id /usr/lib/gsd-xsettings
