@@ -27,3 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 source $HOME/.config/custom/path.sh
+. "$HOME/.cargo/env"
