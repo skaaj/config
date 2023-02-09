@@ -222,7 +222,7 @@ exec --no-startup-id nm-connection-editor
 #
 #client.background       #FFFFF
 
-client.focused          #3C3C3C #2C2C2C #FFFFFF #2E9EF4   #3C3C3C
+client.focused          #5C5C5C #2C2C2C #FFFFFF #2E9EF4   #5C5C5C
 client.focused_inactive #1C1C1C #1C1C1C #888888 #292D2E   #1C1C1C
 client.unfocused        #1C1C1C #1C1C1C #888888 #292D2E   #1C1C1C
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000

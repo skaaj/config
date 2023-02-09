@@ -22,7 +22,7 @@ background-alt = #111111
 ; background-alt = #373B41
 foreground = #C5C8C6
 ;primary = #E95420
-primary = #285577
+primary = #94EBEB
 secondary = #8ABEB7
 alert = #A54242
 disabled = #707880
@@ -138,7 +138,7 @@ blacklist-2 = caps lock
 
 format-prefix = " "
 
-label-layout = %layout%
+label-layout = "%layout% (%variant%)"
 label-layout-foreground = ${colors.foreground}
 
 label-indicator-foreground = ${colors.background}
